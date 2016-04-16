@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Lat:</strong>
+  <%= @forecast.lat %>
+</p>
+
+<p>
+  <strong>Lng:</strong>
+  <%= @forecast.lng %>
+</p>
+
+
+<%= link_to 'Edit', edit_forecast_path(@forecast) %> |
+<%= link_to 'Back', forecasts_path %>
+
+
+The weather is <%= @weather['currently']['summary'] %> and <%=  @weather['currently']['temperature']%> 
+
+<% if (@weather['currently']['temperature']) < 40 %>
+			
+			<h1> 
+				IT'S FREEZING. KEEP WARM AND STAY INSIDE.
+			</h1>
+			<% elsif (@weather['currently']['temperature']) < 60 %> 
+
+			<h1> 
+			 	JACKET! BUNDLE UP
+			</h1>
+
+			<% elsif (@weather['currently']['temperature']) < 80 %> 
+			 
+			<h1> 
+			 	YOU DON'T NEED A JACKET
+			</h1>
+
+			<% else %> 
+			 
+			<h1> 
+			 	SHORTS/ T-SHIRT
+			</h1>
+
+		<% end %>

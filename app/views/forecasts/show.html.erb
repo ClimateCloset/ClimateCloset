@@ -1,43 +1,81 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+        	<div id="left-side">
+				<center><h2>The weather is <%= @weather['currently']['summary'] %> </h2>  <strong><h1><%= @weather['currently']['temperature']%> °F </h1></strong></center>
+			</div>	
+			<!-- <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Lat:</strong>
-  <%= @forecast.lat %>
-</p>
+				<p>
+				  <strong>Lat:</strong>
+				  <%= @forecast.lat %>
+				</p>
 
-<p>
-  <strong>Lng:</strong>
-  <%= @forecast.lng %>
-</p>
-
-
-<%= link_to 'Edit', edit_forecast_path(@forecast) %> |
-<%= link_to 'Back', forecasts_path %>
-
-
-The weather is <%= @weather['currently']['summary'] %> and <%=  @weather['currently']['temperature']%> 
-
-<% if (@weather['currently']['temperature']) < 40 %>
+				<p>
+				  <strong>Lng:</strong>
+				  <%= @forecast.lng %>
+				</p> -->
+				<div>
+				<% if (@weather['currently']['temperature']) < 50 %>
+				<center><img src="http://image005.flaticon.com/116/svg/109/109460.svg" height="70%" width="70%" style="PADDING-TOP: 50px; PADDING-BOTTOM: 50px" ></center>
+				<% elsif (@weather['currently']['temperature']) < 70 %>
+				<center><img src="http://image005.flaticon.com/1/svg/120/120656.svg" height="70%" width="70%" style="PADDING-TOP: 50px; PADDING-BOTTOM: 50px"></center>
+				<% else %> 
+				<center><img src="http://image005.flaticon.com/1/svg/120/120665.svg" height="70%" width="70%" style="PADDING-TOP: 50px; PADDING-BOTTOM: 50px"></center>
+				<% end %>
+				</div>
+			</div>
+        <div class="col-sm-6">
+        	<div id="right-side">
+			<% if (@weather['currently']['temperature']) < 50 %>
 			
-			<h1> 
-				IT'S FREEZING. KEEP WARM AND STAY INSIDE.
-			</h1>
-			<% elsif (@weather['currently']['temperature']) < 60 %> 
+			<h1>It’s pretty cold out.</h1>
+			<p>Here are some fashion tips for dressing warmly since it’s so cold outside:</p>
+			<ul>
+			<li>Look for warmer fabrics like wool, fleece, cashmere, flannel, and down.</li>
+			<li>Layering is essential for staying warm.</li>
+			<li>Go for lots of cold weather accessories: Boots, scarves, hats, knit headbands, earmuffs - whatever you prefer!</li>
+			</ul>
+			<!-- SHOPSTYLE COLLECTIVE WIDGET CODE START --> <div class="shopsense-widget" data-options="%7B%22widgetId%22%3A%22571466b0454044cc0dc48d72%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D"><script> !function(doc,s,id){ var e, p; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; p = '//shopsensewidget.shopstyle.com/widget-script.js'; var cb = new Date().getTime(); p += '?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.ss_shopsense === 'object'){ if(doc.readyState === 'complete'){ window.ss_shopsense.init(); } } }(document, 'script', 'shopsensewidget-script'); </script> <iframe src="//shopsensewidget.shopstyle.com/#/?options=%7B%22widgetId%22%3A%22571466b0454044cc0dc48d72%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D" height="490px" width="705px" seamless style="border: 0;"></iframe></div> <!-- SHOPSTYLE COLLECTIVE WIDGET CODE END -->
+			<% elsif (@weather['currently']['temperature']) < 70 %> 
 
-			<h1> 
-			 	JACKET! BUNDLE UP
-			</h1>
+			
+			<h1>It’s pretty mild out.</h1>
+			<p>Here are some fashion tips for this mild day:</p>
+			<ul>
+			<li>Think in layers.</li>
+			<li>Lightweight pieces let the air circulate if  things are hot.</li>
+			<li>If it gets chillier as the day goes on, cozy clothing items are the way to go! Go for a trendy oversized coat with a t-shirt, or layer on your favorite jeans and cardigan.</li>
+			</ul>
+			 	<!-- SHOPSTYLE COLLECTIVE WIDGET CODE START --> <div class="shopsense-widget" data-options="%7B%22widgetId%22%3A%2257146b31dd4edb9d4ec0ebcc%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D"><script> !function(doc,s,id){ var e, p; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; p = '//shopsensewidget.shopstyle.com/widget-script.js'; var cb = new Date().getTime(); p += '?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.ss_shopsense === 'object'){ if(doc.readyState === 'complete'){ window.ss_shopsense.init(); } } }(document, 'script', 'shopsensewidget-script'); </script> <iframe src="//shopsensewidget.shopstyle.com/#/?options=%7B%22widgetId%22%3A%2257146b31dd4edb9d4ec0ebcc%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D" height="490px" width="705px" seamless style="border: 0;"></iframe></div> <!-- SHOPSTYLE COLLECTIVE WIDGET CODE END -->	
 
-			<% elsif (@weather['currently']['temperature']) < 80 %> 
-			 
-			<h1> 
-			 	YOU DON'T NEED A JACKET
-			</h1>
-
-			<% else %> 
-			 
-			<h1> 
-			 	SHORTS/ T-SHIRT
-			</h1>
+			<% else %> 		 
+			<h1>It’s a scorcher!</h1>
+			<p>Here are some fashions tips for the hot weather:</p>
+			<ul>
+			<li>Try picking out an outfit with breathable fabrics, like cotton or linen.</li>
+			<li>Go sleeveless.</li>
+			<li>Opt for light colors (think: white and pastels) because they reflect light.</li>
+			</ul>
+			 	<!-- SHOPSTYLE COLLECTIVE WIDGET CODE START --> <div class="shopsense-widget" data-options="%7B%22widgetId%22%3A%22571473d961d1dd2d2000c37c%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D"><script> !function(doc,s,id){ var e, p; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; p = '//shopsensewidget.shopstyle.com/widget-script.js'; var cb = new Date().getTime(); p += '?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.ss_shopsense === 'object'){ if(doc.readyState === 'complete'){ window.ss_shopsense.init(); } } }(document, 'script', 'shopsensewidget-script'); </script> <iframe src="//shopsensewidget.shopstyle.com/#/?options=%7B%22widgetId%22%3A%22571473d961d1dd2d2000c37c%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D" height="490px" width="705px" seamless style="border: 0;"></iframe></div> <!-- SHOPSTYLE COLLECTIVE WIDGET CODE END -->
+			
 
 		<% end %>
+		</div>
+       </div>
+    </div>
+</div>  
+
+
+  <!-- CDN stylesheets to clean up display -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/paper/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"/>
+
+    <!-- Bootstrap's required javascript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+

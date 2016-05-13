@@ -2,7 +2,9 @@
 
 =Changes Made for Final Take Home 
 
-  Converted addresses to GPS coordinates. Using geocoder gem, and created a new ‘location’ model scaffolding.  Utilized geocoder for converting addresses and coordinates, finding nearby locations, as well as determining distances between locations.  
+  Converted addresses to GPS coordinates. Using geocoder gem, and created a new ‘location’ model scaffolding.  
+  Utilized geocoder for converting addresses and coordinates, finding nearby locations, as well as determining 
+  distances between locations.  
  
 Changed files: 
  

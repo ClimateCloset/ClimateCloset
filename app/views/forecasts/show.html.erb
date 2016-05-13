@@ -2,6 +2,7 @@
     <div class="row">
         <div class="col-sm-6">
         	<div id="left-side">
+        	<p><center><%= link_to 'FIND NEW FORECAST', new_forecast_path %></center></p>
 				<center><h2>The weather is <%= @weather['currently']['summary'] %> </h2>  <strong><h1><%= @weather['currently']['temperature']%> °F </h1></strong></center>
 			</div>	
 			<!-- <p id="notice"><%= notice %></p>
@@ -27,6 +28,7 @@
 			</div>
         <div class="col-sm-6">
         	<div id="right-side">
+
 			<% if (@weather['currently']['temperature']) < 50 %>
 			
 			<h1>It’s pretty cold out.</h1>
@@ -59,7 +61,7 @@
 			</ul>
 			 	<!-- SHOPSTYLE COLLECTIVE WIDGET CODE START --> <div class="shopsense-widget" data-options="%7B%22widgetId%22%3A%22571473d961d1dd2d2000c37c%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D"><script> !function(doc,s,id){ var e, p; if(!doc.getElementById(id)) { e = doc.createElement(s); e.id = id; p = '//shopsensewidget.shopstyle.com/widget-script.js'; var cb = new Date().getTime(); p += '?cb=' + cb; e.src = p; doc.body.appendChild(e); } if(typeof window.ss_shopsense === 'object'){ if(doc.readyState === 'complete'){ window.ss_shopsense.init(); } } }(document, 'script', 'shopsensewidget-script'); </script> <iframe src="//shopsensewidget.shopstyle.com/#/?options=%7B%22widgetId%22%3A%22571473d961d1dd2d2000c37c%22%2C%22version%22%3A1%2C%22pid%22%3A%22uid5076-33765274-83%22%2C%22size%22%3A200%2C%22columns%22%3A3%2C%22rows%22%3A2%2C%22url%22%3A%22https%3A%2F%2Fapi.shopstyle.com%2Fapi%2Fv2%22%7D" height="490px" width="705px" seamless style="border: 0;"></iframe></div> <!-- SHOPSTYLE COLLECTIVE WIDGET CODE END -->
 			
-
+            
 		<% end %>
 		</div>
        </div>

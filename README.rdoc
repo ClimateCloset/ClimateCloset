@@ -1,22 +1,28 @@
-== ClimateCloset
+== README
 
-Have you ever woken up and not known what to wear?  Climate closet gives you perfectly curated suggestions of what to wear based on the weather.  The goal of climate closet is to simplify the user's daily routine of getting ready for the day by displaying appropriate and fashionable clothing suggestions based on the weather outside.  Simply specify your location and Climate Closet is a web application built using Ruby on Rails that allows the user to view the current weather forecast (within the user’s selected location) along with suggested clothing items.  The clothing is selected based on what is appropriate to wear given the current weather conditions.  The user has the ability to shop for the suggested clothing items directly on the page.  This allows for a seamless shopping user experience.   
+This README would normally document whatever steps are necessary to get the
+application up and running.
 
-Installation:
+Things you may want to cover:
 
-* Download zip file from github (or clone repo to your local machine) 
+* Ruby version
 
-* Install rails 
+* System dependencies
 
-* Open terminal
+* Configuration
 
-* cd to the corresponding project file
+* Database creation
 
-* Run the command ‘rails server’
+* Database initialization
 
-* Open preferred browser and navigate to http://localhost:3000/
+* How to run the test suite
 
-* Submit latitude and longitude to interact with the web application
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
 
 
-Enjoy!
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

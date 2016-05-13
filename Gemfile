@@ -1,5 +1,6 @@
-source 'http://rubygems.org'
+ source 'http://rubygems.org'
 
+gem 'geocoder'
 gem 'forecast_io'
 gem 'figaro'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

@@ -1,0 +1,52 @@
+
+<!-- [final take-home] This is a message to the user that confirms that the location has been created successfully, I am not displaying this to the user-->
+<!--<p id="notice"><%= notice %></p> -->
+
+<p>
+<center><%= link_to 'FIND NEW LOCATION', new_location_path %></center>
+</p>
+
+<!-- Instructions for users -->
+<h4><center>Please copy and paste the latitude and longitude of your location to search the forecast</center></h4>
+
+<!--Display inputted address along with the GPS Coordinates -->
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
+
+
+<!-- [final take-home] USING Google Maps to pass latitude and longitude as a marker, and displaying a map of the users specified location -->
+
+<center>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@location.latitude}%2C#{@location.longitude}" %>
+</center>
+
+<!-- ALGORITHM to find neaby locations.  Loop through nearby locations -->
+<h3>Locations Nearby</h3>
+
+<!-- pass nearby locations within a 20 mile radius -->
+<ul>
+<% for location in @location.nearbys(20) %>
+
+<!--  display distance from the location that it originated from in list format-->
+
+  <li><%= link_to location.address, location %> (<%= location.distance.round(2) %> miles)</li>
+
+<% end %>
+</ul>
+
+
+
+
